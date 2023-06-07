@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :author, class_name: 'User', optional: true
   has_many :comments
   has_many :likes
 
@@ -11,6 +11,6 @@ class Post < ApplicationRecord
   end
 
   def most_recent_comments
-    Comment.where(post_id: id).order(created_at: :desc)
+    Comment.where(post_id: id).order(created_at: :desc).limit(5)
   end
 end

@@ -1,5 +1,5 @@
 class Like < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :author, class_name: 'User', optional: true
   belongs_to :post, optional: true
 
   def update_like_counter
