@@ -1,0 +1,20 @@
+<ul class="users posts">
+        <% posts.each do |post| %>
+            <li class="user">
+                <%= link_to post.title, user_post_path(@user, post) %>
+                <p><%= post.text %></p>
+                <p>Comments: <%= post.comments_counter %></p>
+                <p>Likes: <%= post.likes_counter %></p>
+            </li> 
+            
+            <% if ren===0 %>
+            <% if post.comments.any? %>
+            <%= render 'shared/comments', post: post %>
+            <% else %>
+            <h3>No hay comentarios</h3>
+            <% end %>
+            <% end %>
+
+            
+        <% end %>
+    </ul>
