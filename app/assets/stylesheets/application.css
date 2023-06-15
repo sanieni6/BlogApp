@@ -246,8 +246,8 @@
   align-items: center;
   gap: 10px;
 }
+
 .field {
-  
   display: flex;
   flex-direction: row;
   align-items: center;
