@@ -1,0 +1,7 @@
+<li class="user-main">
+    <img src="<%= user.photo %>" class="image">
+    <div class="user-container">
+        <h1 class="user-name"><%= link_to user.name, user_path(user) %></h1>
+        <p class="number-posts">Number of posts: <%= user.posts.count %></p>
+    </div>
+</li>

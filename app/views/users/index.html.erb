@@ -1,2 +1,9 @@
-<h1> Here´s a list of registered users</h1>
+<div class="main-container">
+    
+    <ul class="users">
+        <% @users.each do |user| %>
+            <%= render partial: 'shared/user', locals: { user: user } %>
+        <% end %>
+    </ul>
+ </div>
 

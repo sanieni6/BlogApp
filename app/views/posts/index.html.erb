@@ -1,1 +1,9 @@
-<h1> This is a list of posts</h1>
+<div class="main-container">
+    <div class="show-container">
+        <%= render partial: 'shared/user', locals: { user: @user } %>
+        <%= render partial: 'shared/user_posts', locals: { posts: @user.posts, ren: 0 } %>
+    </div>
+</div>
+
+
+

@@ -1,1 +1,12 @@
-<h1> This is a post</h1>
+<div class="main-containers">
+  <div class="post-text">
+    <div class="header-content"> 
+      <div class="user-info">
+        <h1 class="post-by">Post n°<%= @post.id %> by <%=@user.name %></h1>
+        <p class="comment-likes">Comments: <%= @post.comments_counter %> Likes: <%= @post.likes_counter %></p>
+      </div>
+      <p class="post-content"><%= @post.text %></p>
+    </div>
+        <%= render 'shared/comments', post: @post %>        
+  </div>
+</div>
