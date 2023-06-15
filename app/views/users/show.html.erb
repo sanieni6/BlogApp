@@ -1,10 +1,12 @@
 <div class="main-container">
-<%= render partial: 'shared/user', locals: { user: @user } %>
-        <div class="bio-container">
-        <p>Bio</p>
-        <p><%= @user.bio %></p>
-        </div>
-    
-        <%= render partial: 'shared/user_posts', locals: { posts: @user.posts, ren: 1 } %>
-    <button><%= link_to 'See all posts', user_posts_path(@user) %></button>
+    <div class="show-container">
+    <%= render partial: 'shared/user', locals: { user: @user } %>
+            <div class="bio-container">
+                <p class="space">Bio</p>
+                <p class="space"><%= @user.bio %></p>
+            </div>
+        
+            <%= render partial: 'shared/user_posts', locals: { posts: @user.posts, ren: 1 } %>
+        <button class="all-posts"><%= link_to 'See all posts', user_posts_path(@user) %></button>
+    </div>
 </div>

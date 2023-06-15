@@ -1,18 +1,12 @@
-<div main-container>
-<div class="post-text"> 
-<div class="user-info">
-<h1>Post n°<%= @post.id %> by <%=@user.name %></h1>
-<p>Comments: <%= @post.comments_counter %></p>
-<p>Likes: <%= @post.likes_counter %></p>
-</div>
-<p><%= @post.text %></p>
-</div>
-<div class="comment-section">
-<% if @post.comments.any? %>
-      <%= render 'shared/comments', post: @post %>
-    <% else %>
-      <h3>No hay comentarios</h3>
-    <% end %>
-        
-</div>
+<div class="main-containers">
+  <div class="post-text">
+    <div class="header-content"> 
+      <div class="user-info">
+        <h1 class="post-by">Post n°<%= @post.id %> by <%=@user.name %></h1>
+        <p class="comment-likes">Comments: <%= @post.comments_counter %> Likes: <%= @post.likes_counter %></p>
+      </div>
+      <p class="post-content"><%= @post.text %></p>
+    </div>
+        <%= render 'shared/comments', post: @post %>        
+  </div>
 </div>

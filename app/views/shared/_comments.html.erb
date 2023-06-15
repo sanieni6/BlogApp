@@ -1,7 +1,13 @@
-<lu class="user comment">
-<% post.comments.each do |comment| %>
+<ul class="user comment">
+<% if post.comments.any? %>
+    <% post.comments.each do |comment| %>
     <li class="content-comment">
-    <p class="content-comment"><%= User.find(comment.author_id).name %>:<%= comment.text %></p>
+        <p class="content-comment"><%= User.find(comment.author_id).name %>:<%= comment.text %></p>
     </li>
     <% end %>
-</lu>
+    <% else %>
+    <h3 class="no-comments">No hay comentarios</h3>
+
+  
+<% end %>
+</ul>

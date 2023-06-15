@@ -1,19 +1,16 @@
-<ul class="users posts">
-        <% posts.each do |post| %>
-            <li class="user">
-                <%= link_to post.title, user_post_path(@user, post) %>
-                <p><%= post.text %></p>
-                <p>Comments: <%= post.comments_counter %></p>
-                <p>Likes: <%= post.likes_counter %></p>
+<ul class="users ad-size">
+        <% posts.each_with_index do |post, index| %>
+            <li class="ind-post">
+                <h2 class="text-format counter">Post #<%= link_to index+1, user_post_path(@user, post) %></h2>
+                <p class="text-format counter"><%= post.text %></p>
+                <p class="text-format number-posts adj-end">Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
+                <% if ren===0 %>
+                    <hr class="separator">
+                    <%= render 'shared/comments', post: post %>
+                <% end %>            
             </li> 
             
-            <% if ren===0 %>
-            <% if post.comments.any? %>
-            <%= render 'shared/comments', post: post %>
-            <% else %>
-            <h3>No hay comentarios</h3>
-            <% end %>
-            <% end %>
+            
 
             
         <% end %>
