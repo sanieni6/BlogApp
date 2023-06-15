@@ -2,6 +2,8 @@ class Like < ApplicationRecord
   belongs_to :author, class_name: 'User', optional: true
   belongs_to :post, optional: true
 
+  after_create :update_like_counter
+
   def update_like_counter
     post = Post.find_by(id: post_id)
     return unless post

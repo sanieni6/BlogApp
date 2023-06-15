@@ -7,6 +7,7 @@
       </div>
       <p class="post-content"><%= @post.text %></p>
     </div>
-        <%= render 'shared/comments', post: @post %>        
+        <%= render 'shared/comments', post: @post %>   
+        <%= link_to 'Create comment', new_user_post_comment_path(@user.id, @post.id), class:'comment-btn comm-border' %>     
   </div>
 </div>
