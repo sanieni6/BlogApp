@@ -3,6 +3,9 @@
             <li class="ind-post">
                 <h2 class="text-format counter">Post #<%= link_to index+1, user_post_path(@user, post) %></h2>
                 <p class="text-format counter"><%= post.text %></p>
+                <%= form_with url: user_post_likes_path(@user.id, post.id), class:'like-form' do |form|%>
+                    <%= form.submit '', class: 'like-btn', style: "background-image: url(#{asset_path('like.svg')})" %>
+                <% end %>
                 <p class="text-format number-posts adj-end">Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
                 <% if ren===0 %>
                     <hr class="separator">

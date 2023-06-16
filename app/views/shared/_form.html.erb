@@ -1,0 +1,25 @@
+<%= form_with model: form_object, url: form_url, class: 'form' do |form| %>
+    <h1 class="new-type">Add a new <%= type%></h1>
+    <% if type == "post"%>
+    <div class="field">
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div class="field">
+    
+        <%= form.label :text %>
+        <%= form.text_area :text %>
+    </div>
+    <div class="actions">
+        <%= form.submit(class:'submit-btn') %>
+    </div>
+    <% elsif type == "comment" %>
+    <div class="field">
+        <%= form.label :text %>
+        <%= form.text_area :text %>
+    </div>
+    <div class="actions">
+        <%= form.submit(class:'submit-btn') %>
+    </div>
+    <% end %>
+<% end %>
