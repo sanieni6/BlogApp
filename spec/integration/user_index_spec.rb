@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe 'Integration tests for users', type: :feature do
   before(:each) do
       @users = User.all
