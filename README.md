@@ -108,6 +108,12 @@ To run the project, execute the following command:
 - Twitter: [Twitter](https://twitter.com/its_luis_sz23)
 - Linkedin:  [LinkedIn](https://www.linkedin.com/in/luissanchezz3/)
 
+👤👤 **Osvaldo Barrios**
+
+- Twitter : [@OsvaldoBarrio20](https://twitter.com/OsvaldoBarrio20)
+- GitHub :  [@OsvaldoBC](https://github.com/OsvaldoBC)
+- LinkedIn: [osvaldo-barrios-data-science](https://linkedin.com/in/osvaldo-barrios-data-science)
+
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
 ## 🔭 Future Features <a name="future-features"></a>
