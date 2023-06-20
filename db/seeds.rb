@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
-second_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
-fourth_user = User.create(name: 'Jaime', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
-third_user = User.create(name: 'Jonh', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
+first_user = User.create(name: 'Tom', photo: 'https://cdna.artstation.com/p/assets/images/images/050/089/394/large/steven-lo-ji-1.jpg?1654031250&dl=1', bio: 'Teacher from Mexico.')
+second_user = User.create(name: 'Lilly', photo: 'https://cdna.artstation.com/p/assets/images/images/050/089/394/large/steven-lo-ji-1.jpg?1654031250&dl=1', bio: 'Teacher from Poland.')
+fourth_user = User.create(name: 'Jaime', photo: 'https://cdna.artstation.com/p/assets/images/images/050/089/394/large/steven-lo-ji-1.jpg?1654031250&dl=1', bio: 'Teacher from Mexico.')
+third_user = User.create(name: 'Jonh', photo: 'https://cdna.artstation.com/p/assets/images/images/050/089/394/large/steven-lo-ji-1.jpg?1654031250&dl=1', bio: 'Teacher from Mexico.')
 
 first_post = Post.create(author_id: second_user.id, title: 'Hello', text: 'This is my first post')
 second_post = Post.create(author_id: second_user.id, title: 'Hello', text: 'This is my second post')
