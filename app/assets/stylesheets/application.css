@@ -282,7 +282,7 @@
 .signup-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
   width: 50%;
   height: max-content;
   align-items: center;
@@ -305,19 +305,24 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+
 }
 
 .signup-button {
   background-color: #fff;
   border: #000 2px solid;
+  width: 100%;
 }
 
 .name-label {
-  flex: 0 0 auto;
+  display: none;
 }
 
 .name-input {
-  flex: 1;
+  width: 100%;
+  border: #000 3px solid;
+  box-sizing: border-box;
+  padding: 3px;
 }
 
 .header {
@@ -348,4 +353,21 @@
   flex-direction: row;
   gap: 5px;
   list-style: none;
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  gap: 10px;
+}
+
+.shared-signup {
+  display: flex;
+  background-color: #fff;
+  border: #000 2px solid;
+  width: 65%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
