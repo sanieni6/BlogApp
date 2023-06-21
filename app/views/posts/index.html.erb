@@ -1,4 +1,5 @@
 <div class="main-container">
+    <%= render 'shared/header'%>
     <div class="show-container">
         <%= render partial: 'shared/user', locals: { user: @user } %>
         <button class="add-comment"><%= link_to 'Create new post', new_user_post_path, class:'comment-btn'%></button>

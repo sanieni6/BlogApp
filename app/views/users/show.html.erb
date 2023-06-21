@@ -1,4 +1,5 @@
 <div class="main-container">
+<%= render 'shared/header'%>
     <div class="show-container">
     <%= render partial: 'shared/user', locals: { user: @user } %>
             <div class="bio-container">
@@ -8,5 +9,7 @@
         
             <%= render partial: 'shared/user_posts', locals: { posts: @user.posts, ren: 1 } %>
         <button class="all-posts"><%= link_to 'See all posts', user_posts_path(@user) %></button>
+        
+
     </div>
 </div>
