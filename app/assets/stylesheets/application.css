@@ -118,7 +118,7 @@
 }
 
 .post-text {
-  width: 85%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,4 +265,87 @@
   border: #000 3px solid;
   margin-top: 10px;
   padding: 4px;
+}
+
+.main-signup-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.signup-container {
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  height: max-content;
+  align-items: center;
+  margin-top: 30px;
+  border: #000 3px solid;
+}
+
+.signup {
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.signup-button {
+  background-color: #fff;
+  border: #000 2px solid;
+}
+
+.name-label {
+  flex: 0 0 auto;
+}
+
+.name-input {
+  flex: 1;
+}
+
+.header {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  border: #000 3px solid;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  align-self: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.header-title {
+  margin: 0;
+}
+
+.user-links {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  list-style: none;
 }
