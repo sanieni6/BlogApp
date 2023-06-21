@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
     def destroy
-      sign_out(current_user)
-      redirect_to root_path, notice: "¡Has cerrado sesión exitosamente!"
+      session.delete(:current_user_id)
+      flash[:notice] = "Session have been closed successfully!"
+      redirect_to root_url, status: :see_other
     end
   end
