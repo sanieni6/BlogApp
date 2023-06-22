@@ -34,4 +34,13 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text)
   end
+  
+  def user_posts
+    @posts = Post.find_by(author_id: params[:id])
+    render json: @posts, only: %i[id title text]
+  end
+
 end
+
+
+
