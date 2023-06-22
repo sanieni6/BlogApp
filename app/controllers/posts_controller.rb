@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_resource through: :current_user
   def index
     @user = User.includes(posts: [:comments]).find(params[:user_id])
     @posts = Post.all
@@ -22,6 +23,12 @@ class PostsController < ApplicationController
       flash[:alert] = 'Post not created'
       render :new
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to root_path, status: :see_other
   end
 
   def post_params
