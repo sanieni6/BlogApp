@@ -11,9 +11,14 @@ Rails.application.routes.draw do
     end
   end
   
-  get 'posts/user:id', to: 'posts#user_posts', as: :posts_user
-  get 'comments/post:id', to: 'comments#post_comments', as: :comments_post
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  namespace :api do
+    namespace :v1 do
+      post :auth, to: 'authentication#create'
+      resources :users, only: [] do
+        resources :posts, only: [:index] do
+          resources :comments, only: [:index, :create]
+        end
+      end
+    end
+  end
 end
