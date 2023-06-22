@@ -27,6 +27,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"name-input", placeholder:"Password confirmation" %>
   </div>
 
+  <div class="field">
+    <%= f.label :role %>
+    <%= f.select :role, options_for_select(['admin', 'user'], 'user') %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up", class:"signup-button" %>
   </div>

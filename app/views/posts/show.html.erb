@@ -7,7 +7,11 @@
         <p class="comment-likes">Comments: <%= @post.comments_counter %> Likes: <%= @post.likes_counter %></p>
       </div>
       <p class="post-content"><%= @post.text %></p>
+      <% if can? :destroy , @post %>
+          <%= button_to '', user_post_path(@user, @post), method: :delete, style: "background-image: url(#{asset_path('delete.svg')})", class: "delete-btn" %>
+      <%end%> 
     </div>
+        
         <%= render 'shared/comments', post: @post %>   
         <%= link_to 'Create comment', new_user_post_comment_path(@user.id, @post.id), class:'comment-btn comm-border' %>     
   </div>
