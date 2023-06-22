@@ -24,4 +24,10 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:text)
   end
+  
+  def post_comments
+    @comments = Comment.find_by(post_id: params[:id])
+    render json: @comments, only: %i[id text author_id]
+  end
+
 end
