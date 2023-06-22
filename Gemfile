@@ -58,6 +58,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+
 end
 
 group :development do
@@ -80,3 +81,5 @@ gem 'devise', '~> 4.9'
 gem 'cancancan'
 
 gem 'load_and_authorize_resource'
+
+gem 'jwt'
