@@ -76,3 +76,7 @@ group :test do
 end
 
 gem 'devise', '~> 4.9'
+
+gem 'cancancan'
+
+gem 'load_and_authorize_resource'
