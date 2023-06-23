@@ -1,4 +1,4 @@
-class Api::V1::PostsController < ApplicationController
+class Api::V1::PostsController < ApiController
   def index
     @user = User.find(params[:user_id])
     respond_to do |format|
