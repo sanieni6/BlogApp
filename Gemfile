@@ -58,6 +58,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rswag'
+  gem 'rswag-api'
+  gem 'rswag-ui'
+
 end
 
 group :development do
@@ -82,3 +86,5 @@ gem 'cancancan'
 gem 'load_and_authorize_resource'
 
 gem 'jwt'
+
+gem 'rswag'
