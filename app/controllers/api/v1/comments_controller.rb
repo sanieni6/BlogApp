@@ -1,5 +1,4 @@
 class Api::V1::CommentsController < ApiController
-
   def index
     @post = Post.find(params[:post_id])
     respond_to do |format|
