@@ -12,7 +12,7 @@ class ApiController < ApplicationController
   end
 
   def authenticate_token!
-    payload = JsonWebToken.decode(auth_token)
+    payload = JsonToken.decode(auth_token)
     @current_user = User.find(payload['sub'])
   rescue JWT::VerificationError
     render json: { errors: ['Invalid auth token'] }, status: :unauthorized

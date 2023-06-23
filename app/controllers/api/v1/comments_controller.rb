@@ -1,8 +1,10 @@
-class Api::V1::CommentsController < ApplicationController
+class Api::V1::CommentsController < ApiController
+
   def index
     @post = Post.find(params[:post_id])
-    @comments = @post.comments
-    render json: @comments
+    respond_to do |format|
+      format.json { render 'api/v1/comments/index' }
+    end
   end
 
   def create
